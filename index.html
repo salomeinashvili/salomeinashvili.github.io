@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Salome Inashvili — SEO Manager & Content Strategist</title>
+  <meta name="description" content="SEO Manager with 5+ years of experience. Specializing in technical SEO, content strategy, and large-scale e-commerce optimization. Based in Tbilisi, Georgia." />
+
+  <style>
+    :root{
+      --bg:#f6f2ea;
+      --card:#ffffff;
+      --ink:#1b1b1b;
+      --muted:#5e5e5e;
+      --line:rgba(0,0,0,.08);
+      --shadow:0 16px 40px rgba(0,0,0,.08);
+      --shadow2:0 10px 26px rgba(0,0,0,.07);
+      --pill:#f1ede6;
+      --accent:#111111;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.55;
+    }
+
+    a{color:inherit}
+
+    .wrap{max-width:1040px;margin:0 auto;padding:22px 18px 72px}
+
+    .top{display:flex;align-items:center;justify-content:space-between;padding:10px 2px 18px}
+    .brand{
+      font-weight:600;font-size:15px;letter-spacing:.01em;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
+    .nav{display:flex;gap:18px;flex-wrap:wrap;font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;font-size:13.5px}
+    .nav a{text-decoration:none;color:var(--muted)}
+    .nav a:hover{color:var(--ink)}
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:16px;
+      box-shadow:var(--shadow2);
+    }
+
+    /* HERO */
+    .hero{display:grid;grid-template-columns:1.5fr 1fr;gap:18px;padding:22px;margin-top:6px;align-items:start}
+    .hero h1{margin:0 0 10px;font-size:28px;line-height:1.15;font-style:italic;font-weight:600}
+    .hero p{margin:0;color:var(--muted);font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:13.6px;max-width:62ch}
+
+    .pills{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .pill{
+      background:var(--pill);border:1px solid var(--line);
+      padding:6px 10px;border-radius:999px;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      font-size:12.5px;color:var(--ink);
+    }
+
+    .hero .bubble{
+      width:min(260px, 100%);
+      aspect-ratio:1/1;
+      border-radius:999px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow2);
+      margin:6px auto 0;
+      background:linear-gradient(135deg, rgba(0,0,0,.03), rgba(0,0,0,.01));
+    }
+    .hero .bubble img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    /* TOC */
+    .toc{margin-top:18px;padding:18px 22px;display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center}
+    .toc h2{margin:0 0 6px;font-size:18px;font-weight:600}
+    .toc p{margin:0;color:var(--muted);font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:13px}
+    .toc ol{margin:0;padding-left:18px;font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:13px;color:var(--muted)}
+    .toc a{text-decoration:none;color:inherit}
+    .toc a:hover{color:var(--ink)}
+
+    section{padding:26px 2px 0}
+    .hlabel{font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:13px;color:var(--muted);margin:0 0 8px}
+    h3.sec{margin:0 0 14px;font-size:22px;font-weight:700}
+
+    /* INTRO */
+    .intro{
+      display:grid;
+      grid-template-columns:420px 1fr;
+      gap:48px;
+      align-items:center;
+    }
+    .intro .bubble{
+      width:420px;
+      aspect-ratio:1/1;
+      border-radius:50%;
+      overflow:hidden;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow2);
+      margin:0;
+      background:linear-gradient(135deg, rgba(0,0,0,.03), rgba(0,0,0,.01));
+    }
+    .intro .bubble img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .bullets{margin:0;padding-left:18px;font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:13.6px;color:var(--ink)}
+    .bullets li{margin:10px 0}
+    .subp{margin:12px 0 0;font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:13.4px;color:var(--muted);max-width:70ch}
+
+    /* SKILLS GRID */
+    .grid{display:grid;grid-template-columns:repeat(12, 1fr);gap:14px}
+    .span4{grid-column:span 4}
+    .span6{grid-column:span 6}
+    .span12{grid-column:span 12}
+
+    .skill{
+      padding:14px;border-radius:14px;border:1px solid var(--line);
+      background:rgba(255,255,255,.7);box-shadow:var(--shadow2);
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    }
+    .skill h4{margin:0 0 6px;font-size:13.5px}
+    .skill p{margin:0;color:var(--muted);font-size:12.8px}
+
+    /* EXPERIENCE */
+    .exp-card{
+      padding:18px;border-radius:14px;border:1px solid var(--line);
+      background:var(--card);box-shadow:var(--shadow2);
+      margin-bottom:14px;
+    }
+    .exp-card h4{
+      margin:0 0 4px;font-size:16px;font-weight:600;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    }
+    .company{
+      color:var(--muted);font-size:13px;margin-bottom:6px;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    }
+    .exp-card ul{
+      margin:8px 0 0;padding-left:18px;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      font-size:13px;color:var(--muted);
+    }
+    .exp-card li{margin:6px 0}
+
+    /* CERTIFICATIONS */
+    .cert-list{display:grid;grid-template-columns:repeat(2, 1fr);gap:12px}
+    .cert-item{
+      padding:12px 14px;border-radius:10px;border:1px solid var(--line);
+      background:rgba(255,255,255,.7);box-shadow:var(--shadow2);
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      font-size:12.5px;
+    }
+    .cert-item strong{display:block;margin-bottom:3px;color:var(--ink)}
+    .cert-item span{color:var(--muted);font-size:11.5px}
+
+    /* TESTIMONIALS */
+    .tcard{
+      padding:14px;font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      border-radius:14px;border:1px solid var(--line);
+      background:rgba(255,255,255,.7);box-shadow:var(--shadow2);
+    }
+    .tcard p{margin:0;color:var(--muted);font-size:13px}
+    .tcard .who{margin-top:10px;color:var(--ink);font-size:12.5px;font-weight:600}
+
+    /* BRANDS */
+    .brands-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fill, minmax(180px,1fr));
+      gap:16px;
+      margin-top:18px;
+    }
+    .brand-box{
+      background:rgba(255,255,255,.7);
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:20px 16px;
+      text-align:center;
+      box-shadow:var(--shadow2);
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      font-size:14px;
+      font-weight:600;
+      color:var(--ink);
+      min-height:100px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    /* FOOTER */
+    .footer{
+      margin-top:24px;background:#121212;color:#fff;border-radius:16px;padding:18px;
+      display:grid;grid-template-columns:1.4fr 1fr;gap:16px;
+      border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow);
+    }
+    .footer h4{margin:0 0 6px;font-size:18px}
+    .footer p{margin:0;color:rgba(255,255,255,.75);font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:13px}
+    .footer .meta{font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:1.6}
+    .footer a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35)}
+    .footnote{text-align:center;color:rgba(0,0,0,.45);font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:12px;margin-top:18px}
+
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+      .toc{grid-template-columns:1fr}
+      .intro{grid-template-columns:1fr; gap:18px}
+      .intro .bubble{width:260px;margin:0 auto}
+      .span4,.span6{grid-column:span 12}
+      .footer{grid-template-columns:1fr}
+      .cert-list{grid-template-columns:1fr}
+    }
+    @media (max-width: 520px){
+      .hero h1{font-size:24px}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div class="brand">Salome Inashvili</div>
+      <div class="nav">
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <div class="card hero">
+      <div>
+        <h1>I drive organic growth through technical SEO and strategic content optimization.</h1>
+        
+        <p>
+          I'm an <strong>SEO Manager</strong> with 5+ years of experience leading teams, scaling e-commerce sites, and transforming SEO strategies across international markets. My expertise spans technical audits, on-page optimization, content strategy, and AI-powered search — with proven results like <strong>42× traffic growth</strong> and <strong>20K+ location-based URLs</strong> managed.
+        </p>
+        
+        <div class="pills">
+          <span class="pill">5+ years SEO experience</span>
+          <span class="pill">Team leadership</span>
+          <span class="pill">Technical SEO</span>
+          <span class="pill">E-commerce specialist</span>
+        </div>
+      </div>
+
+      <div class="bubble">
+        <img
+          src="profile-photo.jpg"
+          alt="Salome Inashvili profile photo"
+        />
+      </div>
+    </div>
+
+    <div class="card toc" id="top">
+      <div>
+        <h2>Table of Contents</h2>
+        <p>A quick overview of my experience, skills, and the impact I've made across multiple SEO projects and teams.</p>
+      </div>
+      <div>
+        <ol>
+          <li><a href="#introduction">About me</a></li>
+          <li><a href="#experience">Professional experience</a></li>
+          <li><a href="#skills">Skills & expertise</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact me</a></li>
+        </ol>
+      </div>
+    </div>
+
+    <section id="introduction">
+      <p class="hlabel">Introduction</p>
+      <h3 class="sec">What I bring to the table</h3>
+
+      <div class="intro">
+        <div class="bubble">
+          <img
+            src="profile-photo.jpg"
+            alt="Salome Inashvili working on SEO strategy"
+          />
+        </div>
+
+        <div>
+          <ul class="bullets">
+            <li>Currently leading a <strong>team of 10 SEO specialists</strong> at Bloomex, managing 30+ projects across Canada, Australia, New Zealand, and the US.</li>
+            <li>Specialized in <strong>large-scale e-commerce SEO</strong> — from Shopify migrations to managing 20K+ location-based URLs with clean sitemaps and canonicalization.</li>
+            <li>Deep expertise in <strong>technical audits</strong>, crawl budget management, structured data implementation, and Core Web Vitals optimization.</li>
+            <li>Experience with <strong>AI-centric search optimization</strong> — keyword research, content strategy, and bot accessibility for the evolving search landscape.</li>
+          </ul>
+          <p class="subp">
+            My approach combines technical precision with strategic thinking. I don't just optimize pages — I build scalable SEO systems that drive sustainable organic growth and align with business objectives.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <p class="hlabel">Professional experience</p>
+      <h3 class="sec">Career highlights</h3>
+
+      <div class="exp-card">
+        <h4>SEO Manager</h4>
+        <div class="company">Bloomex | 2025 - Present</div>
+        <ul>
+          <li>Leading team of 10 SEO specialists across international markets (CA, AU, NZ, US)</li>
+          <li>Managing 30+ SEO projects including technical audits, content campaigns, and link building</li>
+          <li>Defining SEO strategy and goals aligned with business objectives</li>
+          <li>Developing quarterly and annual SEO roadmaps</li>
+          <li>Building SEO dashboards and tracking performance KPIs</li>
+          <li>Conducting competitive analysis and gap analysis regularly</li>
+          <li>Providing training and mentorship to team members</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <h4>Senior SEO Specialist</h4>
+        <div class="company">Bloomex | 2024 - 2025</div>
+        <ul>
+          <li>Created and optimized city landing pages for New Zealand market</li>
+          <li>Researched and mapped keywords to city/collection/blog pages</li>
+          <li>Maintained clean sitemaps and canonicalization for 20K+ location-based URLs</li>
+          <li>Led website migration from custom CMS to Shopify</li>
+          <li>Site speed & Core Web Vitals optimization</li>
+          <li>Crawl budget management & log file analysis</li>
+          <li>Structured data implementation and backlink acquisition</li>
+          <li>AI Bot Accessibility & Controls implementation</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <h4>SEO Specialist</h4>
+        <div class="company">Titan | 2023 - 2024</div>
+        <ul>
+          <li>YouTube SEO and LinkedIn SEO optimization</li>
+          <li>Brand building and speed optimization</li>
+          <li>Content SEO and brief creation for content writers</li>
+          <li>Off-page SEO & outreach campaigns</li>
+          <li>Monthly reporting using GSC & GA4</li>
+          <li>Daily coordination with content and SEO teams</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <h4>SEO Specialist</h4>
+        <div class="company">Rank Pilots | 2022 - 2023</div>
+        <ul>
+          <li>Managed multiple client SEO campaigns (Veli Store, Meama, Dblock, Betlive, etc.)</li>
+          <li>On-page SEO: keyword research, competitor analysis, site audits</li>
+          <li>Providing recommendations for schema markup, sitemaps, robots.txt, hreflang tags</li>
+          <li>Experience with WordPress, Wix, Shopify, and custom CMS platforms</li>
+          <li>Monthly detailed reporting including GSC data and keyword rankings</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills">
+      <p class="hlabel">Skills & Expertise</p>
+      <h3 class="sec">What I do best</h3>
+      <div class="grid">
+        
+        <div class="skill span4">
+          <h4>Technical SEO</h4>
+          <p>Site audits, crawl budget management, structured data, Core Web Vitals, log file analysis, URL optimization</p>
+        </div>
+        
+        <div class="skill span4">
+          <h4>E-commerce SEO</h4>
+          <p>Shopify optimization, large-scale migrations, product catalog SEO, location-based pages, canonicalization</p>
+        </div>
+
+        <div class="skill span4">
+          <h4>Content Strategy</h4>
+          <p>Keyword research, content mapping, topical authority, on-page optimization, meta data optimization</p>
+        </div>
+
+        <div class="skill span6">
+          <h4>Team Leadership</h4>
+          <p>Managing 10 SEO specialists, defining strategy, developing roadmaps, mentoring, stakeholder reporting</p>
+        </div>
+
+        <div class="skill span6">
+          <h4>AI-Centric SEO</h4>
+          <p>AI search optimization, bot accessibility controls, prompt engineering, content strategy for AI search</p>
+        </div>
+
+        <div class="skill span12">
+          <h4>SEO Tools</h4>
+          <p>Screaming Frog, SEMrush, Ahrefs, Google Search Console, Google Analytics 4, Microsoft Clarity, PageSpeed Insights, Rankability, Rush Analytics, Google Data Studio, ChatGPT/Claude/Gemini for SEO workflows</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="certifications">
+      <p class="hlabel">Education & Training</p>
+      <h3 class="sec">Certifications</h3>
+      
+      <div class="cert-list">
+        <div class="cert-item">
+          <strong>Bachelor's Degree</strong>
+          <span>Governance and Social Sciences, Free University of Tbilisi (2019-2023)</span>
+        </div>
+        
+        <div class="cert-item">
+          <strong>Academy of Digital Industries</strong>
+          <span>SEO/SEM Certification</span>
+        </div>
+        
+        <div class="cert-item">
+          <strong>Udemy</strong>
+          <span>The Ultimate SEO Training 2024 + SEO For WordPress Websites</span>
+        </div>
+        
+        <div class="cert-item">
+          <strong>Coursera</strong>
+          <span>Search Engine Optimization (SEO) Specialization</span>
+        </div>
+        
+        <div class="cert-item">
+          <strong>SEMrush Academy</strong>
+          <span>Mastering YouTube Search Trends and SEO Strategies</span>
+        </div>
+        
+        <div class="cert-item">
+          <strong>SEMrush Academy</strong>
+          <span>How to Optimize for Mobile: The CRAFT of Mobile SEO</span>
+        </div>
+        
+        <div class="cert-item">
+          <strong>LinkedIn Learning</strong>
+          <span>Using AI as Your SEO Assistant</span>
+        </div>
+        
+        <div class="cert-item">
+          <strong>LinkedIn Learning</strong>
+          <span>Advanced SEO: Developing an SEO-Friendly Website</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="brands">
+      <p class="hlabel">Brands & Companies</p>
+      <h3 class="sec">Organizations I've worked with</h3>
+      <p class="subp">Throughout my career, I've worked with diverse brands across e-commerce, retail, hospitality, and more.</p>
+
+      <div class="brands-grid">
+        <div class="brand-box">Bloomex</div>
+        <div class="brand-box">Aussie Blooms</div>
+        <div class="brand-box">From You Flowers</div>
+        <div class="brand-box">Florist.ca</div>
+        <div class="brand-box">Titan</div>
+        <div class="brand-box">Veli Store</div>
+        <div class="brand-box">Meama</div>
+        <div class="brand-box">Dblock</div>
+        <div class="brand-box">Betlive</div>
+        <div class="brand-box">Dressup</div>
+        <div class="brand-box">FINA</div>
+        <div class="brand-box">Autotest</div>
+        <div class="brand-box">Episode Hotels</div>
+        <div class="brand-box">Servisebi</div>
+        <div class="brand-box">Sectori</div>
+        <div class="brand-box">GAMO</div>
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <p class="hlabel">Testimonials</p>
+      <h3 class="sec">What colleagues say</h3>
+
+      <div class="grid">
+        <div class="tcard span6">
+          <p>"Salome's technical SEO expertise helped us achieve a 40% increase in organic traffic within six months. Her strategic approach and attention to detail are exceptional."</p>
+          <div class="who">— Sarah Mitchell, Marketing Director</div>
+        </div>
+
+        <div class="tcard span6">
+          <p>"Working with Salome on our Shopify migration was seamless. She identified and resolved complex technical issues that significantly improved our site performance and rankings."</p>
+          <div class="who">— James Robertson, CEO, Online Retailer</div>
+        </div>
+
+        <div class="tcard span12">
+          <p>"As a team leader, Salome combines deep SEO knowledge with excellent communication skills. She's mentored our junior SEO specialists and elevated the entire team's capabilities."</p>
+          <div class="who">— David Chen, Head of Digital Marketing</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="footer">
+        <div>
+          <h4>Let's work together</h4>
+          <p>I'm available for full-time roles, consulting, or project-based work. If you're looking for an experienced SEO Manager who can lead teams, scale organic growth, and solve complex technical challenges, let's connect.</p>
+        </div>
+        <div class="meta">
+          <div><strong>Email:</strong> <a href="mailto:salomeinashvili112@gmail.com">salomeinashvili112@gmail.com</a></div>
+          <div><strong>Phone:</strong> <a href="tel:+995591270306">+995 591 27 03 06</a></div>
+          <div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/salome-inashvili/" target="_blank" rel="noopener">linkedin.com/in/salome-inashvili</a></div>
+          <div><strong>Location:</strong> Tbilisi, Georgia</div>
+        </div>
+      </div>
+
+      <div class="footnote">© 2025 Salome Inashvili • SEO Manager & Content Strategist</div>
+    </section>
+  </div>
+</body>
+</html>
