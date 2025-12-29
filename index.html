@@ -48,6 +48,46 @@
       border-radius:16px;
       box-shadow:var(--shadow2);
     }
+    .box{
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:rgba(255,255,255,.65);
+  padding:12px;
+  margin-top:10px;
+}
+
+.box h5{
+  margin:0 0 6px;
+  font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  font-size:12.5px;
+}
+
+.box ul{
+  margin:0;
+  padding-left:18px;
+  font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  font-size:12.8px;
+  color:var(--muted);
+}
+
+.box li{
+  margin:6px 0;
+}
+
+.shot.chart {
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:rgba(255,255,255,.65);
+  padding:16px;
+  box-shadow:var(--shadow2);
+}
+
+.shot.chart img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
 
     /* HERO */
     .hero{display:grid;grid-template-columns:1.5fr 1fr;gap:18px;padding:22px;margin-top:6px;align-items:start}
@@ -318,13 +358,14 @@ I've driven <strong>$500K+ in revenue</strong> from SEO, with results like <stro
       <p class="hlabel">Professional experience</p>
       <h3 class="sec">Career highlights</h3>
 
-    <div class="exp-card">
+   <div class="exp-card">
   <h4>SEO Manager</h4>
   <div class="company">Bloomex | 2025 - Present</div>
   
-  <!-- ROW 1: Responsibilities + GSC Screenshot -->
-  <div style="display:grid; grid-template-columns:1fr 480px; gap:20px; align-items:start; margin-top:12px;">
-    <ul style="margin:0; padding-left:18px;">
+  <!-- My Role & Strategy Box -->
+  <div class="box" style="margin-top:16px;">
+    <h5>My Role & Strategy</h5>
+    <ul>
       <li>Leading team of 10 SEO specialists across international markets (CA, AU, NZ, US)</li>
       <li>Managing 30+ SEO projects including technical audits, content campaigns, and link building</li>
       <li>Defining SEO strategy and goals aligned with business objectives</li>
@@ -333,44 +374,65 @@ I've driven <strong>$500K+ in revenue</strong> from SEO, with results like <stro
       <li>Conducting competitive analysis and gap analysis regularly</li>
       <li>Providing training and mentorship to team members</li>
     </ul>
-    
-   <div>
-  <div style="background:#f0fdf4; border:1px solid #10b981; border-radius:6px; padding:10px; margin-top:8px; text-align:center;">
-    <p style="font-size:13px; font-weight:700; color:#10b981; margin:0; font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;">
-      ↑ 217% Click Growth YoY
-    </p>
-    <p style="font-size:10px; color:var(--muted); margin:4px 0 0 0; font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;">
-      3x increase via Google Search Console
-    </p>
-  </div>
-  <img src="bloomex-nz-results.png" alt="Bloomex GSC Results" style="width:100%; margin-top:12px; border:1px solid var(--line); border-radius:8px; box-shadow:var(--shadow2); display:block;">
-</div>
   </div>
   
- <!-- ROW 2: Keywords Chart (Full Width) -->
-  <div style="margin-top:24px; max-width:700px; margin-left:auto; margin-right:auto;">
-    <div style="background:#f0fdf4; border:1px solid #10b981; border-radius:6px; padding:10px; text-align:left;">
-      <p style="font-size:13px; font-weight:700; color:#10b981; margin:0; font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;">
-        ↑ 100% Keyword Growth
-      </p>
-      <p style="font-size:10px; color:var(--muted); margin:4px 0 0 0; font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;">
-        Organic keyword portfolio: 800 → 1,600+ ranking keywords
-      </p>
+  <!-- Key Results Box -->
+  <div class="box" style="margin-top:16px;">
+    <h5>Key Results (2024-2025)</h5>
+    <ul>
+      <li><strong>Google Search Console:</strong> 217% click growth YoY (1.28K → 4.06K clicks)</li>
+      <li><strong>CTR Improvement:</strong> 179% increase (1.4% → 3.9%)</li>
+      <li><strong>Session Growth:</strong> 324% increase in peak month (Nov 2025)</li>
+      <li><strong>Revenue Impact:</strong> 116% YoY revenue growth ($10.9K → $23.6K)</li>
+      <li><strong>Keyword Expansion:</strong> 100% growth in organic keywords (800 → 1,600+)</li>
+      <li><strong>Local SEO:</strong> Achieved #1 map rankings across all target cities</li>
+    </ul>
+  </div>
+  
+  <!-- Screenshots Section -->
+  <div style="margin-top:20px;">
+    
+    <!-- Screenshot 1: GSC Results -->
+    <div style="margin-bottom:20px;">
+      <div class="shot chart">
+        <img src="bloomex-nz-results.png" alt="Google Search Console Performance" />
+      </div>
+      <div style="text-align:center; font-size:11px; font-weight:bold; color:var(--muted); margin-top:6px; letter-spacing:0.05em; text-transform:uppercase;">
+        Screen 1: 217% Click Growth (Google Search Console)
+      </div>
     </div>
-    <img src="organic-keywords.png" alt="Organic Keyword Growth" style="width:100%; margin-top:12px; border:1px solid var(--line); border-radius:8px; box-shadow:var(--shadow2); display:block;">
+    
+    <!-- Screenshot 2: YoY Performance -->
+    <div style="margin-bottom:20px;">
+      <div class="shot chart">
+        <img src="bloomex-results-new.png" alt="Year-over-Year Performance Metrics" />
+      </div>
+      <div style="text-align:center; font-size:11px; font-weight:bold; color:var(--muted); margin-top:6px; letter-spacing:0.05em; text-transform:uppercase;">
+        Screen 2: Comprehensive YoY Performance
+      </div>
+    </div>
+    
+    <!-- Screenshot 3: Keyword Growth -->
+    <div style="margin-bottom:20px;">
+      <div class="shot chart">
+        <img src="organic-keywords.png" alt="Organic Keyword Portfolio Growth" />
+      </div>
+      <div style="text-align:center; font-size:11px; font-weight:bold; color:var(--muted); margin-top:6px; letter-spacing:0.05em; text-transform:uppercase;">
+        Screen 3: Keyword Portfolio Expansion
+      </div>
+    </div>
+    
+    <!-- Screenshot 4: Local SEO -->
+    <div>
+      <div class="shot chart">
+        <img src="local-seo.png" alt="Local SEO Map Rankings" />
+      </div>
+      <div style="text-align:center; font-size:11px; font-weight:bold; color:var(--muted); margin-top:6px; letter-spacing:0.05em; text-transform:uppercase;">
+        Screen 4: #1 Local Rankings Across Target Cities
+      </div>
+    </div>
+    
   </div>
-      <!-- ROW 2.5: Local SEO Rankings -->
-<div style="margin-top:24px; max-width:700px; margin-left:auto; margin-right:auto;">
-  <div style="background:#f0fdf4; border:1px solid #10b981; border-radius:6px; padding:10px; text-align:left;">
-    <p style="font-size:13px; font-weight:700; color:#10b981; margin:0; font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;">
-      ↑ #1 Local Map Rankings Achieved
-    </p>
-    <p style="font-size:10px; color:var(--muted); margin:4px 0 0 0; font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;">
-      Dominating local search across target cities and surrounding areas
-    </p>
-  </div>
-  <img src="local-seo.jpg" alt="Local SEO Map Rankings" style="width:100%; margin-top:12px; border:1px solid var(--line); border-radius:8px; box-shadow:var(--shadow2); display:block;">
-</div>
   
 </div>
   
